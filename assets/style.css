@@ -5,6 +5,7 @@
   /*logo et titre en 'Shrikhand'*/
 }
 
+/*variables*/
 nav {
   display: flex;
   flex-direction: column;
@@ -100,7 +101,7 @@ button {
   background-color: #9356DC;
   width: 24px;
   height: 24px;
-  border-radius: 25%;
+  border-radius: 50%;
   position: absolute;
   left: 0px;
 }
