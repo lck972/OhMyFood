@@ -1,10 +1,5 @@
 /******General********/
-* {
-    font-family: 'Roboto', sans-serif;
-    color: #101010;
-    
-    /*logo et titre en 'Shrikhand'*/
-}
+
     /*variables*/
 
     $primary: #9356DC;
@@ -12,6 +7,18 @@
     $tertiary: #99E2D0;
     $backgroundGrey1: #eaeaea;
     $backgroundGrey2: #f6f6f6;
+    $backgroundButton: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: #101010;
+        
+    /*logo et titre en 'Shrikhand'*/
+}
+
+body {
+    margin: 0px;
+}
 
 nav {
     display: flex;
@@ -82,7 +89,7 @@ button {
     height: 50px;
     margin: 50px;
     border-radius: 25px;
-    background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+    background: $backgroundButton;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     color: white;
     border: none;
@@ -144,7 +151,16 @@ button {
     width: 22px;
     height: 21px;
     position: absolute;
-    top: 197px;
-    right: 0px;
+    bottom: 60px;
+    right: 80px;
   }
 
+.fa-regular {
+    font-size: 50px;
+   
+}
+
+.fa-solid {
+    color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    
+}

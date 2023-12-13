@@ -1,11 +1,15 @@
 /******General********/
+/*variables*/
 * {
   font-family: "Roboto", sans-serif;
   color: #101010;
   /*logo et titre en 'Shrikhand'*/
 }
 
-/*variables*/
+body {
+  margin: 0px;
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -137,6 +141,14 @@ button {
   width: 22px;
   height: 21px;
   position: absolute;
-  top: 197px;
-  right: 0px;
+  bottom: 60px;
+  right: 80px;
+}
+
+.fa-regular {
+  font-size: 50px;
+}
+
+.fa-solid {
+  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }/*# sourceMappingURL=style.css.map */
