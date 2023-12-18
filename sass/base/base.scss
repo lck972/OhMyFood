@@ -1,0 +1,16 @@
+@use './../utils/variables' as v;
+body {
+  font-size: v.$font-primary;
+  margin: 0px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+* {
+  font-family: 'Roboto', sans-serif;
+  color: #101010;
+
+  /*logo et titre en 'Shrikhand'*/
+}

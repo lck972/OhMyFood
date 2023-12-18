@@ -1,12 +1,5 @@
-/******General********/
-/*variables*/
-* {
-  font-family: "Roboto", sans-serif;
-  color: #101010;
-  /*logo et titre en 'Shrikhand'*/
-}
-
 body {
+  font-size: 1.2rem;
   margin: 0px;
 }
 
@@ -15,23 +8,14 @@ nav {
   flex-direction: column;
 }
 
-.logo {
-  font-family: "Shrikhand", serif;
-  font-style: italic;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 43.74px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.15);
-  width: 100%;
-  height: 63px;
-  margin-top: 0px;
-  margin-bottom: 4px;
+* {
+  font-family: "Roboto", sans-serif;
+  color: #101010;
+  /*logo et titre en 'Shrikhand'*/
 }
 
+/******General********/
+/*variables*/
 .buttonSearch {
   display: flex;
   width: 100%;
@@ -77,40 +61,14 @@ button {
   height: 50px;
   margin: 50px;
   border-radius: 25px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   color: white;
   border: none;
 }
 
-.btnProcess {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  border-radius: 20px;
-  background-color: #f6f6f6;
-  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
-}
-
-.number {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 17px;
-  text-align: left;
-  background-color: #9356DC;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0px;
-}
-
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -121,8 +79,7 @@ button {
 }
 
 .card__img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .Restaurants-cards img {
@@ -150,5 +107,75 @@ button {
 }
 
 .fa-solid {
-  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-}/*# sourceMappingURL=style.css.map */
+  color: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+}
+
+.logo {
+  font-family: "Shrikhand", serif;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 43.74px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 63px;
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
+
+.card-content i {
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%) repeat;
+}
+.card-content svg {
+  display: block;
+}
+.card-content .bg_heart {
+  display: block;
+  position: absolute;
+  clip-path: url(#heart-clip);
+  z-index: 1;
+  background-color: transparent;
+  background-image: linear-gradient(transparent, #9356dc 50%, #ff79da);
+  stroke: 1px;
+  width: 50px;
+  height: 50px;
+  bottom: 0px;
+  right: 10px;
+  background-position-y: 0%;
+}
+
+.fonctionnement .btnProcess {
+  display: flex;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  gap: 50px;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+  padding: 5px 0px 5px 3px;
+  align-items: center;
+}
+.fonctionnement .btnProcess__content {
+  display: flex;
+  gap: 15px;
+}
+.fonctionnement .number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: left;
+  background-color: #9356dc;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

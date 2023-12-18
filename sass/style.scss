@@ -1,166 +1,104 @@
 /******General********/
 
-    /*variables*/
+/*variables*/
 
-    $primary: #9356DC;
-    $secondary: #FF79DA;
-    $tertiary: #99E2D0;
-    $backgroundGrey1: #eaeaea;
-    $backgroundGrey2: #f6f6f6;
-    $backgroundButton: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
-
-* {
-    font-family: 'Roboto', sans-serif;
-    color: #101010;
-        
-    /*logo et titre en 'Shrikhand'*/
-}
-
-body {
-    margin: 0px;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-}
-
-.logo {
-    font-family: 'Shrikhand', serif;
-    font-style: italic;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 43.74px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.15);
-    width: 100%;
-    height: 63px;
-    margin-top: 0px;
-    margin-bottom: 4px;
-
-}
+$primary: #9356dc;
+$secondary: #ff79da;
+$tertiary: #99e2d0;
+$backgroundGrey1: #eaeaea;
+$backgroundGrey2: #f6f6f6;
+$backgroundButton: linear-gradient(
+  193.33deg,
+  $primary -11.44%,
+  $secondary 123.93%
+);
 
 .buttonSearch {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    background-color: $backgroundGrey1;
-   }
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: $backgroundGrey1;
+}
 input {
-    background-color: $backgroundGrey1;
-    border: $backgroundGrey1;
+  background-color: $backgroundGrey1;
+  border: $backgroundGrey1;
 }
 
 .Reserv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: $backgroundGrey2;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $backgroundGrey2;
 }
 
 .Reserv h2 {
-    width: 25%;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-    text-align: center;
-
+  width: 25%;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
 }
 .Reserv p {
-    width: 33%;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #353535;
-
+  width: 33%;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #353535;
 }
 
 button {
-    width: 25%;
-    height: 50px;
-    margin: 50px;
-    border-radius: 25px;
-    background: $backgroundButton;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    color: white;
-    border: none;
-}
-
-.btnProcess {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    border-radius: 20px;
-    background-color: $backgroundGrey2;
-    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
-
-}
-
-.number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 17px;
-    text-align: left;
-    background-color: $primary;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    position: absolute;
-    left: 0px;
+  width: 25%;
+  height: 50px;
+  margin: 50px;
+  border-radius: 25px;
+  background: $backgroundButton;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  border: none;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: white;
-    border-radius: 20px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    margin: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  margin: 10px;
 }
 .card__img {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .Restaurants-cards img {
-    width: 100%;
-    height: 231px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px 20px 0px 0px;
-  }
-  .card-content {
-    text-decoration: none;
-  }
+  width: 100%;
+  height: 231px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px 20px 0px 0px;
+}
+.card-content {
+  text-decoration: none;
+}
 
-  .card-heart {
-    width: 22px;
-    height: 21px;
-    position: absolute;
-    bottom: 60px;
-    right: 80px;
-  }
+.card-heart {
+  width: 22px;
+  height: 21px;
+  position: absolute;
+  bottom: 60px;
+  right: 80px;
+}
 
 .fa-regular {
-    font-size: 50px;
-   
+  font-size: 50px;
 }
 
 .fa-solid {
-    color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    
+  color: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
 }
