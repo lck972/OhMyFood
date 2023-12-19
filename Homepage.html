@@ -1,128 +1,171 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <link href="./sass/style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="./sass/style.css" rel="stylesheet" />
+    <link href="./sass/base/reset.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&family=Roboto&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Accueil OhMyFood</title>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <header>
-            <nav>
-                <div>
-                    <h1 class="logo">Ohmyfood</h1>
-                </div>
-                <div class="buttonSearch" >
-                    <form method="get" action="#">                   
-                        <label for="Localisation"><i class="fa-solid fa-location-dot"></i></label>
-                        <input type="search" name="Localisation" id="Localisation">
-                    </form>     
-                </div>
-            </nav>
-        </header>
-        <main>
+      <header>
+        <nav>
+          <div>
+            <h1 class="logo">Ohmyfood</h1>
+          </div>
+          <div class="buttonSearch">
+            <form method="get" action="#">
+              <label for="Localisation"
+                ><i class="fa-solid fa-location-dot"></i
+              ></label>
+              <input type="search" name="Localisation" id="Localisation" />
+            </form>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div>
+          <section class="Reserv">
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>
+              Découvrez des restaurants d'exception, sélectionnés par nos soins.
+            </p>
+            <button>Explorez nos restaurants</button>
+          </section>
+          <section class="fonctionnement">
+            <h2>Fonctionnement</h2>
+            <div class="btnProcess">
+              <p class="number">1</p>
+              <div class="btnProcess__content">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <p class="text">Choisissez un restaurant</p>
+              </div>
+            </div>
+            <div class="btnProcess">
+              <p class="number">2</p>
+              <p><i class="fa-solid fa-list"></i></p>
+              <p>Composez votre menu</p>
+            </div>
+            <div class="btnProcess">
+              <p class="number">3</p>
+              <p><i class="fa-solid fa-store"></i></p>
+              <p>Dégustez au restaurant</p>
+            </div>
+          </section>
+          <section>
             <div>
-                <section class="Reserv">
-                    <h2>Réservez le menu qui vous convient</h2>
-                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                    <button>Explorez nos restaurants</button>
-                </section>
-                <section>
-                    <h2>Fonctionnement</h2>
-                        <div class="btnProcess">
-                            <p class="number"> 1 </p><i class="fa-solid fa-mobile-screen-button"></i> <p class="text"> Choisissez un restaurant</p> 
-                        </div>
-                        <div class="btnProcess">
-                            <p class="number">2</p><p><i class="fa-solid fa-list"></i></p><p>Composez votre menu</p>
-                        </div>
-                        <div class="btnProcess">
-                            <p class="number">3</p><p><i class="fa-solid fa-store"></i></p><p>Dégustez au restaurant</p>
-                        </div>
-                </section>
-                <section>
-                    <div>
-                        <h2 class="section-title">Restaurants</h2>
+              <h2 class="section-title">Restaurants</h2>
+            </div>
+            <div class="Restaurants-cards">
+              <a href="#">
+                <article class="card">
+                  <img
+                    src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                    alt="chambre avec 2 lits gris"
+                  />
+                  <div class="card-content">
+                    <div class="card-txt">
+                      <h3 class="card-title">La palette du goût</h3>
+                      <p class="card-subtitle">Ménilmontant</p>
+                      <p>Nouveau</p>
                     </div>
-                    <div class="Restaurants-cards">
-                        <a href="#">
-                            <article class="card">
-                            <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="chambre avec 2 lits gris">
-                            <div class="card-content">
-                                <div class="card-txt">
-                                    <h3 class="card-title">La palette du goût</h3>
-                                    <p class="card-subtitle">Ménilmontant</p>
-                                    <p>Nouveau</p>
-                                </div>
-                                <div class="card-heart">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                            </div>
-                            </article>
-                        </a>
-                        <a href="#">
-                            <article class="card">
-                            <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="chambre avec chaise en bois">
-                            <div class="card-content">
-                                <div class="card-txt">
-                                    <h3 class="card-title">La note enchantée</h3>
-                                    <p class="card-subtitle">Charonne</p>
-                                    <p>Nouveau</p>
-                                </div>
-                                <div class="card-heart">
-                                    <i class="fa-solid fa-heart"></i>
-                                </div>
-                            </div>
-                            </article>
-                        </a>
-                        <a href="#">
-                            <article class="card">
-                            <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="chambre avec deco ronde sur le miroir">
-                            <div class="card-content">
-                                <div class="card-txt">
-                                    <h3 class="card-title">À la française</h3>
-                                    <p class="card-subtitle">Cité rouge</p>
-                                </div>
-                                <div class="card-heart">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                            </div>
-                            </article>
-                        </a>
-                        <a href="#">
-                            <article class="card">
-                            <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="chambre avec poutre et tabelau bleu ciel">
-                            <div class="card-content">
-                                <div class="card-txt">
-                                    <h3 class="card-title">Les délices des sens</h3>
-                                    <p class="card-subtitle">Folie-Méricourt</p>
-                                </div>
-                                <div class="card-heart">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                            </div>
-                            </article>
-                        </a>                        
-                        </div>
-                </section>
+                    <div class="card-heart">
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </article>
+              </a>
+              <a href="#">
+                <article class="card">
+                  <img
+                    src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                    alt="chambre avec chaise en bois"
+                  />
+                  <div class="card-content">
+                    <div class="card-txt">
+                      <h3 class="card-title">La note enchantée</h3>
+                      <p class="card-subtitle">Charonne</p>
+                      <p>Nouveau</p>
+                    </div>
+                    <div class="bg_heart"></div>
+                  </div>
+                </article>
+              </a>
+              <a href="#">
+                <article class="card">
+                  <img
+                    src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                    alt="chambre avec deco ronde sur le miroir"
+                  />
+                  <div class="card-content">
+                    <div class="card-txt">
+                      <h3 class="card-title">À la française</h3>
+                      <p class="card-subtitle">Cité rouge</p>
+                    </div>
+                    <div class="card-heart">
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </article>
+              </a>
+              <a href="#">
+                <article class="card">
+                  <img
+                    src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                    alt="chambre avec poutre et tabelau bleu ciel"
+                  />
+                  <div class="card-content">
+                    <div class="card-txt">
+                      <h3 class="card-title">Les délices des sens</h3>
+                      <p class="card-subtitle">Folie-Méricourt</p>
+                    </div>
+                    <div class="card-heart">
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </article>
+              </a>
             </div>
-        </main>
-        <footer>
-            <div>
-                <p>ohmyfood</p>
-            </div>
-            <div>
-                <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>
-                <p><i class="fa-solid fa-handshake"></i>Devenir partenaire</p>
-                <p>Mentions légales</p>
-                <p>Contact</p>
-            </div>
-        </footer>
+          </section>
+        </div>
+      </main>
+      <footer>
+        <div>
+          <p>ohmyfood</p>
+        </div>
+        <div>
+          <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>
+          <p><i class="fa-solid fa-handshake"></i>Devenir partenaire</p>
+          <p>Mentions légales</p>
+          <p>Contact</p>
+        </div>
+      </footer>
     </div>
-</body>
+    <svg width="0" height="0" viewBox="0 0 512 512">
+      <defs>
+        <clipPath
+          id="heart-clip"
+          clipPathUnits="objectBoundingBox"
+          transform="scale(0.001953125)"
+        >
+          <path
+            d="M 225.8,468.2 223.3,465.9 48.1,303.2 C 17.4,274.7 0,234.7 0,192.8 v -3.3 C 0,119.1 50,58.7 119.2,45.5 158.6,37.9 198.9,47 231,69.6 c 9,6.4 17.4,13.8 25,22.3 4.2,-4.8 8.7,-9.2 13.5,-13.3 3.7,-3.2 7.5,-6.2 11.5,-9 v 0 C 313.1,47 353.4,37.9 392.8,45.4 462,58.6 512,119.1 512,189.5 v 3.3 c 0,41.9 -17.4,81.9 -48.1,110.4 l -175.2,162.7 -2.5,2.3 c -8.2,7.6 -19,11.9 -30.2,11.9 -11.2,0 -22,-4.2 -30.2,-11.9 z"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  </body>
 </html>
