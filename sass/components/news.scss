@@ -1,0 +1,6 @@
+@use './../utils/variables' as v;
+
+.news {
+    background-color: v.$backgroundNew;
+    color: $colorNews;
+}
