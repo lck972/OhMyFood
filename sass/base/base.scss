@@ -23,18 +23,5 @@ footer {
   background-color: v.$backgroundFooter;
   color: v.$colorFont;
   padding-left: 25px;
-
-   &__logo {
-    font-family: 'Shrikhand', serif;
-    font-style: italic;
-    font-weight: 400;
-
-   }
-
-   &__text {
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 15px;
-   }
-
+  
 }

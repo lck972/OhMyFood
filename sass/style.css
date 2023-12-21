@@ -22,16 +22,6 @@ footer {
   color: #ffffff;
   padding-left: 25px;
 }
-footer__logo {
-  font-family: "Shrikhand", serif;
-  font-style: italic;
-  font-weight: 400;
-}
-footer__text {
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 15px;
-}
 
 /******General********/
 /*variables*/
@@ -55,10 +45,12 @@ input {
   align-items: center;
   justify-content: center;
   background-color: #f6f6f6;
+  gap: 25px;
+  padding: 50px 0px 50px 0px;
 }
 
 .Reserv h2 {
-  width: 25%;
+  width: 75%;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -66,24 +58,13 @@ input {
 }
 
 .Reserv p {
-  width: 33%;
+  width: 100%;
   font-size: 18px;
   font-weight: 300;
   line-height: 21px;
   letter-spacing: 0em;
   text-align: center;
   color: #353535;
-}
-
-button {
-  width: 25%;
-  height: 50px;
-  margin: 50px;
-  border-radius: 25px;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  color: white;
-  border: none;
 }
 
 .logo {
@@ -104,9 +85,8 @@ button {
 }
 
 button {
-  width: 25%;
+  width: 186px;
   height: 50px;
-  margin: 50px;
   border-radius: 25px;
   background: linear-gradient(#9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -192,19 +172,115 @@ button {
   background-position-y: 0%;
 }
 
+.restaurant {
+  position: relative;
+  width: 100%;
+  height: 1346px;
+}
+.restaurant .imgMenu img {
+  width: 100%;
+  height: 275px;
+}
+.restaurant .menu {
+  width: 100%;
+  position: absolute;
+  top: 210px;
+  background-color: #f6f6f6;
+  border-radius: 25px 25px 0px 0px;
+  padding-top: 25px;
+}
+
+.menuTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 25px;
+}
+.menuTitle h1 {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.menuTitle i {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+}
+.menuContent h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: 3px #99E2D0 solid;
+  width: 40px;
+}
+.menuContent .plats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  gap: 5px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.menuContent .plats h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+}
+.menuContent .plats p {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 17.63px;
+}
+.menuContent .plats p span {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 17.63px;
+}
+.menuContent button {
+  margin: 30px 0px 30px 0px;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 15px 50px 15px;
+  gap: 15px;
+}
+.fonctionnement h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+}
 .fonctionnement .btnProcess {
   display: flex;
-  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  height: 73px;
   border-radius: 20px;
   background-color: #f6f6f6;
   gap: 50px;
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
-  padding: 5px 0px 5px 3px;
-  align-items: center;
-}
-.fonctionnement .btnProcess__content {
-  display: flex;
-  gap: 15px;
+  padding-left: 30px;
+  margin-left: 10px;
 }
 .fonctionnement .number {
   display: flex;
@@ -220,6 +296,21 @@ button {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  position: absolute;
+  left: -12px;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  padding: 30px 0px 30px 0px;
+}
+.restaurants .section-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+  padding: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
