@@ -20,8 +20,58 @@ footer {
    
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 142px;
   background-color: v.$backgroundFooter;
-  color: v.$colorFont;
-  padding-left: 25px;
+  padding: 22px 25px 22px 25px;
+  gap: 16px;
+
+  .footer__logo {
+    font-family: 'Shrikhand', serif;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.24px;
+    text-align:left;
+    display: flex;
+    align-items: center;
+    height: 27px;
+
+    p {
+      color: v.$colorFont;
+    }
+  }
+
+  .footer__text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    width: 100%;
+    height: 99px;
+    gap: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    color: v.$colorFont;
+     p {
+      color: v.$colorFont;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+     }
+     i {
+      color: v.$colorFont;
+      
+     }
+
+     .fa-utensils {
+      font-size: 13px;
+     }
+
+     .fa-handshake {
+      font-size: 9px;
+     }
+
+  }
   
 }

@@ -18,9 +18,52 @@ nav {
 footer {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 142px;
   background-color: #353535;
+  padding: 22px 25px 22px 25px;
+  gap: 16px;
+}
+footer .footer__logo {
+  font-family: "Shrikhand", serif;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26.24px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  height: 27px;
+}
+footer .footer__logo p {
   color: #ffffff;
-  padding-left: 25px;
+}
+footer .footer__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  width: 100%;
+  height: 99px;
+  gap: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+}
+footer .footer__text p {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer .footer__text i {
+  color: #ffffff;
+}
+footer .footer__text .fa-utensils {
+  font-size: 13px;
+}
+footer .footer__text .fa-handshake {
+  font-size: 9px;
 }
 
 /******General********/
@@ -223,8 +266,16 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  width: 100%;
+  position: relative;
+}
+.menuContent h2::after {
+  content: "";
+  display: block;
   border-bottom: 3px #99E2D0 solid;
   width: 40px;
+  position: absolute;
+  bottom: -5px;
 }
 .menuContent .plats {
   display: flex;
