@@ -1,4 +1,5 @@
 @use './../utils/variables' as v;
+@use './../utils/mixins' as m;
 
 .news {
     display: flex;
@@ -12,4 +13,12 @@
     position: absolute;
     top: 20px ;
     right: 20px;
+
+    @include m.desktop {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16.41px;
+        
+    }
+    
 }

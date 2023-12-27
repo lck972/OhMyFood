@@ -24,6 +24,15 @@ footer {
   padding: 22px 25px 22px 25px;
   gap: 16px;
 }
+@media (min-width: 1280px) {
+  footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    height: 114px;
+    padding: 20px 0px 0px 0px;
+  }
+}
 footer .footer__logo {
   font-family: "Shrikhand", serif;
   font-style: italic;
@@ -34,6 +43,11 @@ footer .footer__logo {
   display: flex;
   align-items: center;
   height: 27px;
+}
+@media (min-width: 1280px) {
+  footer .footer__logo {
+    padding-right: 25px;
+  }
 }
 footer .footer__logo p {
   color: #ffffff;
@@ -49,6 +63,14 @@ footer .footer__text {
   flex-direction: column;
   justify-content: center;
   color: #ffffff;
+}
+@media (min-width: 1280px) {
+  footer .footer__text {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 50px;
+    gap: 25px;
+  }
 }
 footer .footer__text p {
   color: #ffffff;
@@ -66,7 +88,6 @@ footer .footer__text .fa-handshake {
   font-size: 9px;
 }
 
-/******General********/
 /*variables*/
 .buttonSearch {
   display: flex;
@@ -99,13 +120,20 @@ input {
   line-height: 28px;
   text-align: center;
 }
+@media (min-width: 1280px) {
+  .Reserv h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46.88px;
+    text-align: center;
+  }
+}
 
 .Reserv p {
   width: 100%;
   font-size: 18px;
   font-weight: 300;
   line-height: 21px;
-  letter-spacing: 0em;
   text-align: center;
   color: #353535;
 }
@@ -136,6 +164,15 @@ button {
   color: white;
   border: none;
 }
+@media (min-width: 1280px) {
+  button {
+    width: 218px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    text-align: center;
+  }
+}
 
 .card {
   position: relative;
@@ -147,7 +184,7 @@ button {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   margin: 10px;
 }
-.card__img {
+.card img {
   object-fit: cover;
 }
 .card .card-txt {
@@ -175,9 +212,36 @@ button {
   font-size: 22px;
 }
 
+@media (min-width: 1280px) {
+  .Restaurants-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .Restaurants-cards .partie1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 100px;
+    padding-bottom: 30px;
+  }
+  .Restaurants-cards .partie2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 100px;
+  }
+  .Restaurants-cards a {
+    width: 50%;
+  }
+  .Restaurants-cards .card {
+    margin: 10px;
+  }
+}
+
 .Restaurants-cards img {
   width: 100%;
-  height: 231px;
+  height: 160px;
   background-size: cover;
   background-position: center;
   border-radius: 20px 20px 0px 0px;
@@ -195,6 +259,13 @@ button {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+@media (min-width: 1280px) {
+  .news {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.41px;
+  }
 }
 
 .card-content svg {
@@ -315,10 +386,24 @@ button {
   padding: 50px 15px 50px 15px;
   gap: 15px;
 }
+@media (min-width: 1280px) {
+  .fonctionnement {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 180px 50px 180px;
+    gap: 25px;
+  }
+}
 .fonctionnement h2 {
   font-weight: 700;
   font-size: 24px;
   line-height: 28.13px;
+}
+@media (min-width: 1280px) {
+  .fonctionnement h2 {
+    width: 100%;
+  }
 }
 .fonctionnement .btnProcess {
   display: flex;
@@ -332,6 +417,16 @@ button {
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
   padding-left: 30px;
   margin-left: 10px;
+}
+@media (min-width: 1280px) {
+  .fonctionnement .btnProcess {
+    width: 28%;
+    margin: 0px;
+    gap: 13px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.75px;
+  }
 }
 .fonctionnement .number {
   display: flex;
@@ -350,6 +445,9 @@ button {
   position: absolute;
   left: -12px;
 }
+.fonctionnement .fa-store {
+  color: #9356dc;
+}
 
 .restaurants {
   display: flex;
@@ -357,11 +455,25 @@ button {
   background-color: #f6f6f6;
   padding: 30px 0px 30px 0px;
 }
+@media (min-width: 1280px) {
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 30px 180px 30px 180px;
+  }
+}
 .restaurants .section-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28.13px;
   padding: 15px;
+}
+@media (min-width: 1280px) {
+  .restaurants .section-title {
+    width: 100%;
+    padding: 0px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

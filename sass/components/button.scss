@@ -1,4 +1,5 @@
 @use './../utils/variables' as v;
+@use './../utils/mixins' as m;
 
 button {
     width: 186px;
@@ -8,4 +9,13 @@ button {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     color: white;
     border: none;
+
+    @include m.desktop {
+      width: 218px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18.75px;
+      text-align: center;
+      
+    }
   }

@@ -1,4 +1,6 @@
-/******General********/
+
+
+
 
 /*variables*/
 
@@ -12,6 +14,12 @@ $backgroundButton: linear-gradient(
   $primary -11.44%,
   $secondary 123.93%
 );
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+      @content;
+  }
+}
 
 .buttonSearch {
   display: flex;
@@ -42,15 +50,22 @@ input {
   font-weight: 700;
   line-height: 28px;
   text-align: center;
+
+  @include desktop {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46.88px;
+    text-align: center;
+  }
 }
 .Reserv p {
   width: 100%;
   font-size: 18px;
   font-weight: 300;
   line-height: 21px;
-  letter-spacing: 0em;
   text-align: center;
   color: #353535;
+
 }
 
 

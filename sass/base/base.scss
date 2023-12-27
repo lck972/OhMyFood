@@ -1,4 +1,6 @@
 @use './../utils/variables' as v;
+@use './../utils/mixins' as m;
+
 body {
   font-size: v.$font-primary;
   margin: 0px;
@@ -26,6 +28,18 @@ footer {
   padding: 22px 25px 22px 25px;
   gap: 16px;
 
+  @include m.desktop {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    height: 114px;
+    padding: 20px 0px 0px 0px;
+
+
+  }
+
+
+
   .footer__logo {
     font-family: 'Shrikhand', serif;
     font-style: italic;
@@ -36,6 +50,10 @@ footer {
     display: flex;
     align-items: center;
     height: 27px;
+
+    @include m.desktop {
+      padding-right: 25px;
+    }
 
     p {
       color: v.$colorFont;
@@ -53,6 +71,14 @@ footer {
     flex-direction: column;
     justify-content:center;
     color: v.$colorFont;
+
+    @include m.desktop {
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-right: 50px;
+      gap: 25px;
+    }
+
      p {
       color: v.$colorFont;
       display: flex;
