@@ -6,16 +6,19 @@ body {
   margin: 0px;
 }
 
-nav {
-  display: flex;
-  flex-direction: column;
-}
 * {
   font-family: 'Roboto', sans-serif;
   color: #101010;
   text-decoration: none;
 
-  /*logo et titre en 'Shrikhand'*/
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 15px;
+
 }
 
 footer {
@@ -27,6 +30,7 @@ footer {
   background-color: v.$backgroundFooter;
   padding: 22px 25px 22px 25px;
   gap: 16px;
+  
 
   @include m.desktop {
     flex-direction: row-reverse;

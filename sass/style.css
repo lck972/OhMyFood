@@ -1,18 +1,20 @@
+/*Mixins*/
 body {
   font-size: 1.2rem;
   margin: 0px;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
 }
 
 * {
   font-family: "Roboto", sans-serif;
   color: #101010;
   text-decoration: none;
-  /*logo et titre en 'Shrikhand'*/
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 15px;
 }
 
 footer {
@@ -138,6 +140,7 @@ input {
   color: #353535;
 }
 
+/*logo et titre en 'Shrikhand'*/
 .logo {
   font-family: "Shrikhand", serif;
   font-style: italic;
@@ -149,6 +152,22 @@ input {
   justify-content: center;
   align-items: center;
   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 63px;
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
+
+.logomenu {
+  font-family: "Shrikhand", serif;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 43.74px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 63px;
   margin-top: 0px;
@@ -289,11 +308,12 @@ button {
 .restaurant {
   position: relative;
   width: 100%;
-  height: 1346px;
+  height: 1386px;
 }
 .restaurant .imgMenu img {
   width: 100%;
   height: 275px;
+  object-fit: cover;
 }
 .restaurant .menu {
   width: 100%;
@@ -303,12 +323,28 @@ button {
   border-radius: 25px 25px 0px 0px;
   padding-top: 25px;
 }
+@media (min-width: 1280px) {
+  .restaurant .menu {
+    width: 75%;
+    top: 250px;
+    right: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .menuTitle {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding-bottom: 25px;
+}
+@media (min-width: 1280px) {
+  .menuTitle {
+    justify-content: center;
+    gap: 30px;
+  }
 }
 .menuTitle h1 {
   font-family: Shrikhand;
@@ -333,6 +369,15 @@ button {
   padding: 10px;
   gap: 15px;
 }
+@media (min-width: 1280px) {
+  .menuContent {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
 .menuContent h2 {
   display: flex;
   flex-direction: row;
@@ -344,9 +389,14 @@ button {
   content: "";
   display: block;
   border-bottom: 3px #99E2D0 solid;
-  width: 40px;
+  width: 50px;
   position: absolute;
   bottom: -5px;
+}
+@media (min-width: 1280px) {
+  .menuContent h2 {
+    width: 94%;
+  }
 }
 .menuContent .plats {
   display: flex;

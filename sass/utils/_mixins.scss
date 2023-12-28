@@ -1,3 +1,5 @@
+/*Mixins*/
+
 @mixin tablette {
     @media (min-width: 768px) {
         @content;
