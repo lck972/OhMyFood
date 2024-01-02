@@ -4,7 +4,10 @@
 .restaurant {
     position: relative;
     width: 100%;
-    height: 1386px;
+    height: 1370px;
+    @include m.desktop {
+        height: 1405px;
+    }
 
     .imgMenu img {
         width: 100%;
@@ -16,8 +19,9 @@
         width: 100%;
         position: absolute;
         top: 210px;
+        bottom: 0px;
         background-color: v.$backgroundGrey2;
-        border-radius: 25px 25px 0px 0px;
+        border-radius: 40px 40px 0px 0px;
         padding-top: 25px;  
         
         @include m.desktop {
@@ -32,11 +36,19 @@
     }
 }
 
+.restaurant3 {
+    height: 1455px;
+    @include m.desktop {
+        height: 1490px;
+    }
+}
+
 .menuTitle {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding-bottom: 25px;
+    justify-content: space-between;
+    padding: 25px 25px 25px 10px;
+    
 
     @include m.desktop {
         justify-content: center;

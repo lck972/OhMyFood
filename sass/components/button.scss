@@ -9,6 +9,24 @@ button {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     color: white;
     border: none;
+    position: relative;
+    z-index: 1;
+        &:hover {
+            &::after {
+              opacity: 1;
+            }
+        }
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          //background: darken(v.$backgroundButton, 5);
+          opacity: 0;
+          z-index: -1;
+          transition: opacity 250ms;
+      }
 
     @include m.desktop {
       width: 218px;
