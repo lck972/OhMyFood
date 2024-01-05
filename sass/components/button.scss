@@ -1,32 +1,47 @@
 @use './../utils/variables' as v;
 @use './../utils/mixins' as m;
 
-button {
-    width: 186px;
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    width: 218px;
     height: 50px;
     border-radius: 25px;
-    background: v.$backgroundButton;
+    background: linear-gradient(355deg,
+      rgba(147, 86, 220, 1) 0%,
+      rgba(255, 121, 218, 1) 100%);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     color: white;
     border: none;
     position: relative;
     z-index: 1;
+    
         &:hover {
             &::after {
-              opacity: 1;
+              opacity: 0.5;
             }
-        }
+          }
         &::after {
+          content: "";
           position: absolute;
           top: 0;
           right: 0;
-          bottom: 0;
+          bottom: 0;  
           left: 0;
-          //background: darken(v.$backgroundButton, 5);
+          border-radius: 25px;
+          background:linear-gradient(0deg,
+          lighten(rgba(155, 89, 220, 1), 5%) 0%,
+          lighten(rgba(167, 127, 216, 1), 5%) 33%,
+          lighten(rgba(255, 121, 218, 1), 5%) 100%);
+          box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
           opacity: 0;
           z-index: -1;
-          transition: opacity 250ms;
-      }
+          transition: opacity 500ms;
+        }
 
     @include m.desktop {
       width: 218px;

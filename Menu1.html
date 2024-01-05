@@ -40,13 +40,16 @@
                 <div class="menu">
                     <section class="menuTitle">
                         <h1>La palette du goût</h1>
-                        <i class="fa-regular fa-heart"></i>
+                        <div class="menu-heart">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
                     </section>
                     <section class="menuContent">
                         <h2>ENTRÉES</h2>
                             <div class="plats">
                                 <h3>Fricassée d'escargots</h3>
                                 <p>Au piment d'Espelette <span>25€</span></p>
+                                <div class="check"></div>
                             </div>
                             <div class="plats">
                                 <h3>Foie gras de canard mi-cuit</h3>
@@ -88,7 +91,7 @@
                                 <h3>Mousse au chocolat</h3> 
                                 <p>Au piment d'Espelette et à la truffe noire <span>23€</span></p>
                             </div>
-                        <button>Commander</button>
+                        <a class="button" href="#">Commander</a>
                     </section>
                 </div>
             </div>
@@ -104,6 +107,18 @@
               <p>Contact</p>
             </div>
           </footer>
-    
+          <svg width="0" height="0" viewBox="0 0 512 512">
+            <defs>
+              <clipPath
+                id="heart-clip"
+                clipPathUnits="objectBoundingBox"
+                transform="scale(0.001953125)"
+              >
+                <path
+                  d="M 225.8,468.2 223.3,465.9 48.1,303.2 C 17.4,274.7 0,234.7 0,192.8 v -3.3 C 0,119.1 50,58.7 119.2,45.5 158.6,37.9 198.9,47 231,69.6 c 9,6.4 17.4,13.8 25,22.3 4.2,-4.8 8.7,-9.2 13.5,-13.3 3.7,-3.2 7.5,-6.2 11.5,-9 v 0 C 313.1,47 353.4,37.9 392.8,45.4 462,58.6 512,119.1 512,189.5 v 3.3 c 0,41.9 -17.4,81.9 -48.1,110.4 l -175.2,162.7 -2.5,2.3 c -8.2,7.6 -19,11.9 -30.2,11.9 -11.2,0 -22,-4.2 -30.2,-11.9 z"
+                />
+              </clipPath>
+            </defs>
+          </svg>
 </body>
 </html>

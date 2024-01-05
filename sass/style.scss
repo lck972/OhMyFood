@@ -14,6 +14,8 @@ $backgroundButton: linear-gradient(
   $primary -11.44%,
   $secondary 123.93%
 );
+$greyFont:rgba(53, 53, 53, 1);
+
 
 @mixin desktop {
   @media (min-width: 1280px) {
@@ -22,16 +24,18 @@ $backgroundButton: linear-gradient(
 }
 
 .buttonSearch {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  color: $greyFont;
   display: flex;
   width: 100%;
   height: 50px;
   align-items: center;
   justify-content: center;
   background-color: $backgroundGrey1;
-}
-input {
-  background-color: $backgroundGrey1;
-  border: $backgroundGrey1;
+  gap: 20px;
 }
 
 .Reserv {

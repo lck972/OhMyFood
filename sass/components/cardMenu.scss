@@ -64,13 +64,6 @@
         letter-spacing: 0em;
         text-align: left;
     }
-
-    i {
-        font-size: 22px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
 .menuContent {
@@ -137,6 +130,14 @@
                 font-weight: 700;
                 line-height: 17.63px;
                 }
+            }
+            .check {
+                display: flex;
+                justify-content: end;
+                width: 15%;
+                height: 10px;
+                border: 2px solid ;
+                background-color: v.$tertiary;
             }
     }
 

@@ -21,7 +21,6 @@ body {
 footer {
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 142px;
   background-color: #353535;
   padding: 22px 25px 22px 25px;
@@ -93,17 +92,18 @@ footer .footer__text .fa-handshake {
 
 /*variables*/
 .buttonSearch {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  color: rgb(53, 53, 53);
   display: flex;
   width: 100%;
   height: 50px;
   align-items: center;
   justify-content: center;
   background-color: #eaeaea;
-}
-
-input {
-  background-color: #eaeaea;
-  border: #eaeaea;
+  gap: 20px;
 }
 
 .Reserv {
@@ -175,32 +175,42 @@ input {
   margin-bottom: 4px;
 }
 
-button {
-  width: 186px;
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  width: 218px;
   height: 50px;
   border-radius: 25px;
-  background: linear-gradient(#9356dc -11.44%, #ff79da 123.93%);
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   color: white;
   border: none;
   position: relative;
   z-index: 1;
 }
-button:hover::after {
-  opacity: 1;
+.button:hover::after {
+  opacity: 0.5;
 }
-button::after {
+.button::after {
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  border-radius: 25px;
+  background: linear-gradient(0deg, #a86ee0 0%, #b493de 33%, #ff93e1 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
   opacity: 0;
   z-index: -1;
-  transition: opacity 250ms;
+  transition: opacity 500ms;
 }
 @media (min-width: 1024px) {
-  button {
+  .button {
     width: 218px;
     font-weight: 500;
     font-size: 16px;
@@ -242,6 +252,21 @@ button::after {
   position: absolute;
   bottom: 40px;
   right: 30px;
+}
+.card .card-heart:active {
+  display: block;
+  position: absolute;
+  clip-path: url(#heart-clip);
+  z-index: 1;
+  background-color: transparent;
+  background-image: linear-gradient(transparent, #9356dc -11.44%, #ff79da 123.93%);
+  stroke: 1px;
+  width: 22px;
+  height: 22px;
+  bottom: 40px;
+  right: 30px;
+  background-position-y: 0%;
+  transition: transform;
 }
 .card .card-heart i {
   font-size: 22px;
@@ -303,22 +328,39 @@ button::after {
   }
 }
 
-.card-content svg {
-  display: block;
+.menu-heart {
+  width: 22px;
+  height: 21px;
+  position: absolute;
+  top: 60px;
+  right: 30px;
 }
-.card-content .bg_heart {
+@media (min-width: 1024px) {
+  .menu-heart {
+    position: absolute;
+    top: 60px;
+    right: 350px;
+  }
+}
+.menu-heart:active {
   display: block;
   position: absolute;
   clip-path: url(#heart-clip);
   z-index: 1;
   background-color: transparent;
-  background-image: linear-gradient(transparent, #9356dc 50%, #ff79da);
+  background-image: linear-gradient(transparent, #9356dc -11.44%, #ff79da 123.93%);
   stroke: 1px;
-  width: 22px;
-  height: 21px;
-  bottom: 40px;
+  bottom: 60px;
   right: 30px;
+  font-weight: 900;
   background-position-y: 0%;
+}
+@media (min-width: 1024px) {
+  .menu-heart:active {
+    position: absolute;
+    top: 60px;
+    right: 350px;
+  }
 }
 
 .restaurant {
@@ -386,12 +428,6 @@ button::after {
   letter-spacing: 0em;
   text-align: left;
 }
-.menuTitle i {
-  font-size: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .menuContent {
   display: flex;
@@ -456,6 +492,14 @@ button::after {
   font-size: 15px;
   font-weight: 700;
   line-height: 17.63px;
+}
+.menuContent .plats .check {
+  display: flex;
+  justify-content: end;
+  width: 15%;
+  height: 10px;
+  border: 2px solid;
+  background-color: #99e2d0;
 }
 .menuContent button {
   margin: 30px 0px 30px 0px;

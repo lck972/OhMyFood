@@ -1,21 +1,41 @@
-.card-content {
-  
-  svg {
-    display: block;
-  }
-  .bg_heart {
-    display: block;
+@use './../utils/variables' as v;
+@use './../utils/mixins' as m;
+
+.menu-heart {
+  width: 22px;
+  height: 21px;
+  position: absolute;
+  top: 60px;
+  right: 30px;
+
+  @include m.desktop {
     position: absolute;
-    clip-path: url(#heart-clip);
-    z-index: 1;
-    background-color: transparent;
-    // background-image: linear-gradient(#9356dc -11.44%, #ff79da 123.93%);
-    background-image: linear-gradient(transparent, #9356dc 50%, #ff79da);
-    stroke: 1px;
-    width: 22px;
-    height: 21px;
-    bottom: 40px;
-    right: 30px;
-    background-position-y: 0%;
+    top: 60px;
+    right: 350px;
+
   }
+
+  &:active {
+      display: block;
+      position: absolute;
+      clip-path: url(#heart-clip);
+      z-index: 1;
+      background-color: transparent;
+      background-image: linear-gradient(transparent, #9356dc -11.44%, #ff79da 123.93%);
+      stroke: 1px;
+      bottom: 60px;
+      right: 30px;
+      font-weight: 900;
+      background-position-y: 0%;
+        @include m.desktop {
+          position: absolute;
+          top: 60px;
+          right: 350px;
+        }
+      
+  }
+
+  
+      
+  
 }
