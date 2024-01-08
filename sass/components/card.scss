@@ -39,7 +39,11 @@
         bottom: 40px;
         right: 30px;
 
-        &:active {
+        &:focus i {
+            display: none;
+        }
+
+        &:focus {
             display: block;
             position: absolute;
             clip-path: url(#heart-clip);
@@ -85,8 +89,9 @@
             gap: 100px;
         }
 
-            a {
+        .cardCheck {
                 width: 50%;
+                cursor: pointer;
             }
 
             .card {

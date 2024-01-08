@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Mixins*/
 body {
   font-size: 1.2rem;
@@ -253,7 +254,10 @@ footer .footer__text .fa-handshake {
   bottom: 40px;
   right: 30px;
 }
-.card .card-heart:active {
+.card .card-heart:focus i {
+  display: none;
+}
+.card .card-heart:focus {
   display: block;
   position: absolute;
   clip-path: url(#heart-clip);
@@ -291,8 +295,9 @@ footer .footer__text .fa-handshake {
     width: 100%;
     gap: 100px;
   }
-  .Restaurants-cards a {
+  .Restaurants-cards .cardCheck {
     width: 50%;
+    cursor: pointer;
   }
   .Restaurants-cards .card {
     margin: 10px;
@@ -339,10 +344,13 @@ footer .footer__text .fa-handshake {
   .menu-heart {
     position: absolute;
     top: 60px;
-    right: 350px;
+    right: 300px;
   }
 }
-.menu-heart:active {
+.menu-heart:focus i {
+  display: none;
+}
+.menu-heart:focus {
   display: block;
   position: absolute;
   clip-path: url(#heart-clip);
@@ -352,14 +360,14 @@ footer .footer__text .fa-handshake {
   stroke: 1px;
   bottom: 60px;
   right: 30px;
-  font-weight: 900;
+  font-weight: 400;
   background-position-y: 0%;
 }
 @media (min-width: 1024px) {
-  .menu-heart:active {
+  .menu-heart:focus {
     position: absolute;
     top: 60px;
-    right: 350px;
+    right: 300px;
   }
 }
 
@@ -467,42 +475,57 @@ footer .footer__text .fa-handshake {
 }
 .menuContent .plats {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
   background-color: white;
   border-radius: 15px;
-  padding: 15px;
-  gap: 5px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
-.menuContent .plats h3 {
+.menuContent .plats:hover .check {
+  margin-right: 0;
+}
+.menuContent .plats .description {
+  padding: 15px;
+}
+.menuContent .plats .description h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
 }
-.menuContent .plats p {
+.menuContent .plats .description p {
   display: flex;
   justify-content: space-between;
   font-weight: 300;
   font-size: 15px;
   line-height: 17.63px;
 }
-.menuContent .plats p span {
+.menuContent .plats .prix {
+  display: flex;
+  flex-direction: row;
   font-size: 15px;
   font-weight: 700;
   line-height: 17.63px;
+  margin-left: auto;
+  overflow: hidden;
+}
+.menuContent .plats .prix .€ {
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
 }
 .menuContent .plats .check {
   display: flex;
   justify-content: end;
-  width: 15%;
-  height: 10px;
+  width: 60px;
   border: 2px solid;
+  border-radius: 0px 15px 15px 0px;
   background-color: #99e2d0;
+  margin-right: -65px;
 }
-.menuContent button {
-  margin: 30px 0px 30px 0px;
+.menuContent .button {
+  margin: 20px 0px 25px 0px;
 }
 
 .fonctionnement {

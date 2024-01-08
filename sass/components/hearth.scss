@@ -11,11 +11,15 @@
   @include m.desktop {
     position: absolute;
     top: 60px;
-    right: 350px;
+    right: 300px;
 
   }
 
-  &:active {
+  &:focus i {
+    display: none;
+  }
+
+  &:focus {
       display: block;
       position: absolute;
       clip-path: url(#heart-clip);
@@ -25,12 +29,12 @@
       stroke: 1px;
       bottom: 60px;
       right: 30px;
-      font-weight: 900;
+      font-weight: 400;
       background-position-y: 0%;
         @include m.desktop {
           position: absolute;
           top: 60px;
-          right: 350px;
+          right: 300px;
         }
       
   }
