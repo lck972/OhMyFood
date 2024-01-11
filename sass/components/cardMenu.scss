@@ -155,10 +155,18 @@
                 display: flex;
                 justify-content: end;
                 width: 60px;
-                border: 2px solid ;
+                border: 2px solid v.$tertiary;
                 border-radius: 0px 15px 15px 0px;
                 background-color: v.$tertiary;
                 margin-right: -65px;
+
+                & i {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    font-size: 22px;
+                    color: white;
+                }
                 
             }
     }
