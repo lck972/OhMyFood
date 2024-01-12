@@ -254,10 +254,10 @@ footer .footer__text .fa-handshake {
   bottom: 40px;
   right: 30px;
 }
-.card .card-heart:focus i {
+.card .card-heart:hover i {
   display: none;
 }
-.card .card-heart:focus {
+.card .card-heart:hover {
   display: block;
   position: absolute;
   clip-path: url(#heart-clip);
@@ -347,10 +347,10 @@ footer .footer__text .fa-handshake {
     right: 300px;
   }
 }
-.menu-heart:focus i {
+.menu-heart:hover i {
   display: none;
 }
-.menu-heart:focus {
+.menu-heart:hover {
   display: block;
   position: absolute;
   clip-path: url(#heart-clip);
@@ -364,7 +364,7 @@ footer .footer__text .fa-handshake {
   background-position-y: 0%;
 }
 @media (min-width: 1024px) {
-  .menu-heart:focus {
+  .menu-heart:hover {
     position: absolute;
     top: 60px;
     right: 300px;
@@ -468,11 +468,6 @@ footer .footer__text .fa-handshake {
   position: absolute;
   bottom: -5px;
 }
-@media (min-width: 1024px) {
-  .menuContent h2 {
-    width: 94%;
-  }
-}
 .menuContent .plats {
   display: flex;
   flex-direction: row;
@@ -487,7 +482,14 @@ footer .footer__text .fa-handshake {
   margin-right: 0;
 }
 .menuContent .plats .description {
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  padding: 15px 0px 15px 15px;
+  gap: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menuContent .plats .description h3 {
   font-weight: 700;
@@ -513,26 +515,30 @@ footer .footer__text .fa-handshake {
 .menuContent .plats .prix .€ {
   display: flex;
   align-items: flex-end;
-  padding: 15px;
+  width: 55px;
+  padding: 15px 0px 15px 15px;
 }
 .menuContent .plats .check {
-  display: flex;
-  justify-content: end;
-  width: 60px;
+  display: grid;
+  place-items: center;
+  width: 94px;
   border: 2px solid #99e2d0;
   border-radius: 0px 15px 15px 0px;
   background-color: #99e2d0;
-  margin-right: -65px;
+  margin-right: -95px;
+  transition: all 0.5s;
+}
+@media (min-width: 1024px) {
+  .menuContent .plats .check {
+    width: 90px;
+  }
 }
 .menuContent .plats .check i {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   font-size: 22px;
   color: white;
 }
 .menuContent .button {
-  margin: 20px 0px 25px 0px;
+  margin: 20px 0px 20px 0px;
 }
 
 .fonctionnement {
@@ -600,7 +606,7 @@ footer .footer__text .fa-handshake {
   position: absolute;
   left: -12px;
 }
-.fonctionnement .fa-store {
+.fonctionnement .fa-solid:hover {
   color: #9356dc;
 }
 
@@ -637,7 +643,7 @@ footer .footer__text .fa-handshake {
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  color: #fff;
+  color: #9356dc;
 }
 
 .loader:before,
@@ -655,7 +661,7 @@ footer .footer__text .fa-handshake {
 }
 
 .loader:after {
-  color: #FF3D00;
+  color: #ff79da;
   transform: rotateY(70deg);
   animation-delay: 0.4s;
 }

@@ -15,11 +15,11 @@
 
   }
 
-  &:focus i {
+  &:hover i {
     display: none;
   }
 
-  &:focus {
+  &:hover {
       display: block;
       position: absolute;
       clip-path: url(#heart-clip);

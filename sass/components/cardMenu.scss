@@ -97,9 +97,6 @@
                 bottom: -5px;
             }
 
-            @include m.desktop {
-                width: 94%;
-            }  
     }
 
     .plats {
@@ -117,8 +114,15 @@
             }
             
         .description {
-
-            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            width: 310px;
+            padding: 15px 0px 15px 15px;
+            gap: 5px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+           
         
             h3 {
                 font-weight: 700;
@@ -131,6 +135,8 @@
                 font-weight: 300;
                 font-size: 15px;
                 line-height: 17.63px;
+                
+                
             }
         }
             .prix {
@@ -146,24 +152,26 @@
                     .€ {
                         display: flex;
                         align-items: flex-end;
-                        padding: 15px;
-
+                        width: 55px;
+                        padding: 15px 0px 15px 15px;
                     }
                 }
             
             .check {
-                display: flex;
-                justify-content: end;
-                width: 60px;
+                display: grid;
+                place-items: center;
+                width: 94px;
                 border: 2px solid v.$tertiary;
                 border-radius: 0px 15px 15px 0px;
                 background-color: v.$tertiary;
-                margin-right: -65px;
+                margin-right: -95px;
+                transition: all 0.5s ;
+                
+                     @include m.desktop {
+                        width: 90px;
+                     }
 
                 & i {
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
                     font-size: 22px;
                     color: white;
                 }
@@ -172,6 +180,6 @@
     }
 
     .button {
-        margin: 20px 0px 25px 0px;
+        margin: 20px 0px 20px 0px;
       }
 }
