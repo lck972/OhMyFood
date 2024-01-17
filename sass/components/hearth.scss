@@ -2,11 +2,12 @@
 @use './../utils/mixins' as m;
 
 .menu-heart {
-  width: 22px;
+  width: 20px;
   height: 21px;
   position: absolute;
   top: 60px;
   right: 30px;
+  transition: all 1s;
 
   @include m.desktop {
     position: absolute;

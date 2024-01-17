@@ -22,7 +22,7 @@ body {
 footer {
   display: flex;
   flex-direction: column;
-  height: 142px;
+  height: auto;
   background-color: #353535;
   padding: 22px 25px 22px 25px;
   gap: 16px;
@@ -334,11 +334,12 @@ footer .footer__text .fa-handshake {
 }
 
 .menu-heart {
-  width: 22px;
+  width: 20px;
   height: 21px;
   position: absolute;
   top: 60px;
   right: 30px;
+  transition: all 1s;
 }
 @media (min-width: 1024px) {
   .menu-heart {
@@ -495,13 +496,33 @@ footer .footer__text .fa-handshake {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
 }
 .menuContent .plats .description p {
-  display: flex;
-  justify-content: space-between;
+  display: block;
   font-weight: 300;
   font-size: 15px;
   line-height: 17.63px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
+.menuContent .plats .description-text {
+  display: block; /* Utilisez un conteneur en bloc */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menuContent .plats .description-text p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 17.63px;
+  width: 100%;
+  margin: 0; /* Supprimez la marge par défaut du paragraphe */
 }
 .menuContent .plats .prix {
   display: flex;
@@ -525,7 +546,7 @@ footer .footer__text .fa-handshake {
   border: 2px solid #99e2d0;
   border-radius: 0px 15px 15px 0px;
   background-color: #99e2d0;
-  margin-right: -95px;
+  margin-right: -100px;
   transition: all 0.5s;
 }
 @media (min-width: 1024px) {
@@ -637,75 +658,126 @@ footer .footer__text .fa-handshake {
   }
 }
 
-.loader {
-  transform: rotateZ(45deg);
-  perspective: 1000px;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  color: #9356dc;
+* {
+  box-sizing: border-box;
 }
 
-.loader:before,
-.loader:after {
+body .loading-body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #99e2d0; /* Couleur de fond légèrement plus claire */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* Couleur du texte initial */
+  z-index: 2; /* Augmentez le z-index pour placer au-dessus du contenu réel */
+  animation: fade-out 10s ease-in-out forwards 1s, hide-container 1s forwards 10s;
+  visibility: visible;
+}
+
+.loading-container::before,
+.loading-container::after {
   content: "";
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
-  width: inherit;
-  height: inherit;
-  border-radius: 50%;
-  transform: rotateX(70deg);
-  animation: 1s spin linear infinite;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: scale(0.75);
+  -webkit-filter: blur(5vw);
+  -moz-filter: blur(5vw);
+  -ms-filter: blur(5vw);
+  filter: blur(5vw);
+  background: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%); /* Dégradé violet et rose */
+  background-size: 200% 200%;
+  animation: animateGlow 10s ease infinite;
 }
 
-.loader:after {
-  color: #ff79da;
-  transform: rotateY(70deg);
-  animation-delay: 0.4s;
-}
-
-@keyframes rotate {
+@keyframes animateGlow {
   0% {
-    transform: translate(-50%, -50%) rotateZ(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotateZ(360deg);
-  }
-}
-@keyframes rotateccw {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(-360deg);
-  }
-}
-@keyframes spin {
-  0%, 100% {
-    box-shadow: 0.2em 0px 0 0px currentcolor;
-  }
-  12% {
-    box-shadow: 0.2em 0.2em 0 0 currentcolor;
-  }
-  25% {
-    box-shadow: 0 0.2em 0 0px currentcolor;
-  }
-  37% {
-    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+    background-position: 0% 50%;
   }
   50% {
-    box-shadow: -0.2em 0 0 0 currentcolor;
+    background-position: 100% 50%;
   }
-  62% {
-    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  100% {
+    background-position: 0% 50%;
   }
-  75% {
-    box-shadow: 0px -0.2em 0 0 currentcolor;
+}
+.animated-text-container {
+  width: 300px;
+  height: 100px;
+  border-radius: 50%;
+  background: #000; /* Couleur du cadre noir */
+  box-shadow: 0px 10px 10px #353535;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.animated-text {
+  font-family: "Shrikhand", serif;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 43.74px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 0;
+  animation: write-text 3s steps(14, end) infinite, fade-out 10s linear 7s forwards;
+  color: transparent;
+  background: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%); /* Dégradé violet et rose pour les lettres */
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+@keyframes write-text {
+  to {
+    width: 100%;
   }
-  87% {
-    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+}
+@keyframes fade-out {
+  to {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+}
+/* Affichez le contenu réel après la fin de l'animation */
+.loaded-content {
+  opacity: 0;
+  animation: fade-in 2s ease-in-out forwards 7s, hide-container 0s forwards 9s;
+  background-color: #fff; /* Couleur du fond de la page principale */
+  color: #000; /* Couleur du texte dans le contenu réel */
+  padding: 20px;
+  z-index: 1;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    overflow: auto;
+  }
+}
+@keyframes hide-container {
+  to {
+    display: none;
   }
 }
 
