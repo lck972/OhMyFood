@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*Mixins*/
+
 body {
   font-size: 1.2rem;
   margin: 0px;
@@ -99,7 +99,6 @@ footer .footer__text .fa-handshake {
   font-size: 9px;
 }
 
-/*logo et titre en 'Shrikhand'*/
 .logo {
   font-family: "Shrikhand", serif;
   font-style: italic;
@@ -186,7 +185,6 @@ footer .footer__text .fa-handshake {
   gap: 25px;
   padding: 50px 0px 50px 0px;
 }
-
 .Reserv h2 {
   width: 75%;
   font-size: 24px;
@@ -202,7 +200,6 @@ footer .footer__text .fa-handshake {
     text-align: center;
   }
 }
-
 .Reserv p {
   width: 100%;
   font-size: 18px;
@@ -351,7 +348,7 @@ footer .footer__text .fa-handshake {
   z-index: 1;
   background-color: transparent;
   background-image: linear-gradient(transparent, #9356dc -11.44%, #ff79da 123.93%);
-  stroke: 1px;
+  stroke: transparent;
   width: 22px;
   height: 22px;
   bottom: 40px;
@@ -494,7 +491,7 @@ footer .footer__text .fa-handshake {
   z-index: 1;
   background-color: transparent;
   background-image: linear-gradient(transparent, #9356dc -11.44%, #ff79da 123.93%);
-  stroke: 1px;
+  stroke: transparent;
   bottom: 60px;
   right: 30px;
   font-weight: 400;
@@ -672,12 +669,12 @@ body .loading-body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%); /* Couleur de fond légèrement plus claire */
+  background: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff; /* Couleur du texte initial */
-  z-index: 2; /* Augmentez le z-index pour placer au-dessus du contenu réel */
+  color: #fff;
+  z-index: 2;
   animation: fade-out 10s ease-in-out forwards 1s, hide-container 1s forwards 10s;
   visibility: visible;
 }
@@ -696,7 +693,7 @@ body .loading-body {
   -moz-filter: blur(5vw);
   -ms-filter: blur(5vw);
   filter: blur(5vw);
-  background: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%); /* Dégradé violet et rose */
+  background: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
   background-size: 200% 200%;
   animation: animateGlow 10s ease infinite;
 }
@@ -716,7 +713,7 @@ body .loading-body {
   width: 300px;
   height: 100px;
   border-radius: 50%;
-  background: #000; /* Couleur du cadre noir */
+  background: #000;
   box-shadow: 0px 10px 10px #353535;
   display: flex;
   align-items: center;
@@ -736,7 +733,7 @@ body .loading-body {
   width: 0;
   animation: write-text 3s steps(14, end) infinite, fade-out 10s linear 7s forwards;
   color: transparent;
-  background: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%); /* Dégradé violet et rose pour les lettres */
+  background: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -752,12 +749,11 @@ body .loading-body {
     transform: translateX(-100vw);
   }
 }
-/* Affichez le contenu réel après la fin de l'animation */
 .loaded-content {
   opacity: 0;
   animation: fade-in 2s ease-in-out forwards 7s, hide-container 0s forwards 9s;
-  background-color: #fff; /* Couleur du fond de la page principale */
-  color: #000; /* Couleur du texte dans le contenu réel */
+  background-color: #fff;
+  color: #000;
   padding: 20px;
   z-index: 1;
 }

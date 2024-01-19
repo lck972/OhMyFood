@@ -1,6 +1,8 @@
 @use './../utils/variables' as v;
 @use './../utils/mixins' as m;
 
+// Style Homepage //
+
 .Reserv {
     display: flex;
     flex-direction: column;
@@ -9,30 +11,32 @@
     background-color: v.$backgroundGrey2;
     gap: 25px;
     padding: 50px 0px 50px 0px;
-  }
   
-  .Reserv h2 {
-    width: 75%;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-    text-align: center;
   
-    @include m.desktop {
-      font-size: 40px;
+    h2 {
+      width: 75%;
+      font-size: 24px;
       font-weight: 700;
-      line-height: 46.88px;
+      line-height: 28px;
       text-align: center;
+    
+      @include m.desktop {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 46.88px;
+        text-align: center;
+      }
     }
-  }
-  .Reserv p {
-    width: 100%;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 21px;
-    text-align: center;
-    color: #353535;
-  
+
+    p {
+      width: 100%;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 21px;
+      text-align: center;
+      color: #353535;
+    
+    }
   }
 
 .fonctionnement {
@@ -70,8 +74,7 @@
         gap: 13px;
         font-size: 16px;
         font-weight: 500;
-        line-height: 18.75px;
-        
+        line-height: 18.75px;  
       }
   
       display: flex;
@@ -84,11 +87,9 @@
       gap: 50px;
       filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
       padding-left:30px;
-      margin-left: 10px;
-     
-      
-      
+      margin-left: 10px;  
     }
+
     .number {
       display: flex;
       justify-content: center;
