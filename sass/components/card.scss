@@ -160,6 +160,29 @@
             flex-direction: column;
             padding: 20px;
             gap: 10px;
+
+            .news {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 80px;
+              height: 29px;
+              border-radius: 2px;
+              background-color: v.$backgroundNew;
+              color: v.$colorNews;
+              position: absolute;
+              top: 20px ;
+              right: 20px;
+          
+              @include m.desktop {
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 16.41px;
+                  
+              }
+              
+          }
+
         }
 
         .card-title {
@@ -172,6 +195,28 @@
             font-weight: 300;
         }
 
+        .wrap_heart > .card-heart.fill {
+          transform: scale(0);
+          transition: transform 1s;
+      }
+
+        .wrap_heart:hover > .card-heart.fill {
+          transform: scale(1);
+          transition: transform;
+          transition-duration: 1s;
+        }
+
+        .wrap_heart > .card-heart.empty {
+          transform: scale(1);
+          transition: transform 1s;
+      }
+  
+        .wrap_heart:hover > .card-heart.empty {
+            transform: scale(0);
+            transition: transform;
+            transition-duration: 1s;
+          }
+
         .card-heart {
             width: 22px;
             height: 21px;
@@ -179,24 +224,23 @@
             bottom: 40px;
             right: 30px;
 
-            &:hover i {
-                display: none;
+            &.empty {
+              transform: scale(1);
             }
 
-            &:hover {
-                display: block;
+            &.fill {
                 position: absolute;
                 clip-path: url(#heart-clip);
                 z-index: 1;
                 background-color: transparent;
                 background-image: linear-gradient(transparent, #9356dc -11.44%, #ff79da 123.93%);
-                stroke: 1px;
+                stroke: transparent;
                 width: 22px;
                 height: 22px;
                 bottom: 40px;
                 right: 30px;
                 background-position-y: 0%;
-                transition: transform;
+                transform: scale(0);
                 
             }
 

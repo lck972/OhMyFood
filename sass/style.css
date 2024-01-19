@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+/*Mixins*/
 body {
   font-size: 1.2rem;
   margin: 0px;
@@ -97,6 +97,12 @@ footer .footer__text .fa-utensils {
 }
 footer .footer__text .fa-handshake {
   font-size: 9px;
+}
+footer .contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
 }
 
 .logo {
@@ -323,6 +329,26 @@ footer .footer__text .fa-handshake {
   padding: 20px;
   gap: 10px;
 }
+.restaurants .card .card-txt .news {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  color: #008766;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+@media (min-width: 1024px) {
+  .restaurants .card .card-txt .news {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.41px;
+  }
+}
 .restaurants .card .card-title {
   font-weight: 700;
   font-size: 18px;
@@ -331,6 +357,24 @@ footer .footer__text .fa-handshake {
 .restaurants .card .card-subtitle {
   font-weight: 300;
 }
+.restaurants .card .wrap_heart > .card-heart.fill {
+  transform: scale(0);
+  transition: transform 1s;
+}
+.restaurants .card .wrap_heart:hover > .card-heart.fill {
+  transform: scale(1);
+  transition: transform;
+  transition-duration: 1s;
+}
+.restaurants .card .wrap_heart > .card-heart.empty {
+  transform: scale(1);
+  transition: transform 1s;
+}
+.restaurants .card .wrap_heart:hover > .card-heart.empty {
+  transform: scale(0);
+  transition: transform;
+  transition-duration: 1s;
+}
 .restaurants .card .card-heart {
   width: 22px;
   height: 21px;
@@ -338,11 +382,10 @@ footer .footer__text .fa-handshake {
   bottom: 40px;
   right: 30px;
 }
-.restaurants .card .card-heart:hover i {
-  display: none;
+.restaurants .card .card-heart.empty {
+  transform: scale(1);
 }
-.restaurants .card .card-heart:hover {
-  display: block;
+.restaurants .card .card-heart.fill {
   position: absolute;
   clip-path: url(#heart-clip);
   z-index: 1;
@@ -354,7 +397,7 @@ footer .footer__text .fa-handshake {
   bottom: 40px;
   right: 30px;
   background-position-y: 0%;
-  transition: transform;
+  transform: scale(0);
 }
 .restaurants .card .card-heart i {
   font-size: 22px;
@@ -466,13 +509,30 @@ footer .footer__text .fa-handshake {
   letter-spacing: 0em;
   text-align: left;
 }
+.menuTitle .wrap_heart > .menu-heart.fill {
+  transform: scale(0);
+  transition: transform 1s;
+}
+.menuTitle .wrap_heart:hover > .menu-heart.fill {
+  transform: scale(1);
+  transition: transform;
+  transition-duration: 1s;
+}
+.menuTitle .wrap_heart > .menu-heart.empty {
+  transform: scale(1);
+  transition: transform 1s;
+}
+.menuTitle .wrap_heart:hover > .menu-heart.empty {
+  transform: scale(0);
+  transition: transform;
+  transition-duration: 1s;
+}
 .menuTitle .menu-heart {
   width: 20px;
   height: 21px;
   position: absolute;
   top: 60px;
   right: 30px;
-  transition: all 2s;
 }
 @media (min-width: 1024px) {
   .menuTitle .menu-heart {
@@ -481,24 +541,22 @@ footer .footer__text .fa-handshake {
     right: 300px;
   }
 }
-.menuTitle .menu-heart:hover i {
-  display: none;
+.menuTitle .menu-heart.empty {
+  transform: scale(1);
 }
-.menuTitle .menu-heart:hover {
-  display: block;
+.menuTitle .menu-heart.fill {
   position: absolute;
   clip-path: url(#heart-clip);
-  z-index: 1;
-  background-color: transparent;
   background-image: linear-gradient(transparent, #9356dc -11.44%, #ff79da 123.93%);
   stroke: transparent;
   bottom: 60px;
   right: 30px;
   font-weight: 400;
   background-position-y: 0%;
+  transform: scale(0);
 }
 @media (min-width: 1024px) {
-  .menuTitle .menu-heart:hover {
+  .menuTitle .menu-heart.fill {
     position: absolute;
     top: 60px;
     right: 300px;
