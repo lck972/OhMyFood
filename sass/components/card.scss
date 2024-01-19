@@ -1,71 +1,210 @@
 @use './../utils/variables' as v;
 @use './../utils/mixins' as m;
 
-.card {
-    position: relative;
+.Reserv {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    background-color: white;
-    border-radius: 20px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    margin: 10px;
+    background-color: v.$backgroundGrey2;
+    gap: 25px;
+    padding: 50px 0px 50px 0px;
+  }
   
-    img {
-        object-fit: cover;
+  .Reserv h2 {
+    width: 75%;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+  
+    @include m.desktop {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 46.88px;
+      text-align: center;
+    }
+  }
+  .Reserv p {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: center;
+    color: #353535;
+  
+  }
+
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 15px 50px 15px;
+    gap: 15px;
+  
+      @include m.desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 50px 180px 50px 180px;
+        gap: 25px;
+  
+      }
+  
+    h2 {
+  
+      @include m.desktop {
+        width: 100%;
+      }
+  
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28.13px;
+  
+    }
+  
+    .btnProcess {
+  
+      @include m.desktop {
+        width: 28%;
+        margin: 0px;
+        gap: 13px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18.75px;
+        
+      }
+  
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 90%;
+      height: 73px;
+      border-radius: 20px;
+      background-color: v.$backgroundGrey2;
+      gap: 50px;
+      filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+      padding-left:30px;
+      margin-left: 10px;
+     
+      
+      
+    }
+    .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17px;
+      text-align: left;
+      background-color: v.$primary;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      position: absolute;
+      left: -12px;
+    }
+  
+    .fa-solid:hover {
+      color: v.$primary;
+    }
+  }
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    background-color: v.$backgroundGrey2;
+    padding: 30px 0px 30px 0px;
+  
+    @include m.desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 30px 180px 30px 180px;
+     
+    }
+  
+    .section-title {
+  
+      @include m.desktop {
+        width: 100%;
+        padding: 0px;
+      }
+  
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28.13px;
+      padding: 15px;
     }
 
-    .card-txt {
+
+    .card {
+        position: relative;
         display: flex;
         flex-direction: column;
-        padding: 20px;
-        gap: 10px;
-    }
-
-    .card-title {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 21.09px;
-    }
-
-    .card-subtitle {
-        font-weight: 300;
-    }
-
-    .card-heart {
-        width: 22px;
-        height: 21px;
-        position: absolute;
-        bottom: 40px;
-        right: 30px;
-
-        &:hover i {
-            display: none;
+        justify-content: center;
+        background-color: white;
+        border-radius: 20px;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+        margin: 10px;
+    
+        img {
+            object-fit: cover;
         }
 
-        &:hover {
-            display: block;
-            position: absolute;
-            clip-path: url(#heart-clip);
-            z-index: 1;
-            background-color: transparent;
-            background-image: linear-gradient(transparent, #9356dc -11.44%, #ff79da 123.93%);
-            stroke: 1px;
+        .card-txt {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 10px;
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21.09px;
+        }
+
+        .card-subtitle {
+            font-weight: 300;
+        }
+
+        .card-heart {
             width: 22px;
-            height: 22px;
+            height: 21px;
+            position: absolute;
             bottom: 40px;
             right: 30px;
-            background-position-y: 0%;
-            transition: transform;
-            
-        }
 
-        i {
-            font-size: 22px;
-            
+            &:hover i {
+                display: none;
+            }
+
+            &:hover {
+                display: block;
+                position: absolute;
+                clip-path: url(#heart-clip);
+                z-index: 1;
+                background-color: transparent;
+                background-image: linear-gradient(transparent, #9356dc -11.44%, #ff79da 123.93%);
+                stroke: 1px;
+                width: 22px;
+                height: 22px;
+                bottom: 40px;
+                right: 30px;
+                background-position-y: 0%;
+                transition: transform;
+                
+            }
+
+            i {
+                font-size: 22px;
+                
+            }
         }
-      }
-}
+    }
 
   .Restaurants-cards {
 
@@ -109,4 +248,4 @@
     background-position: center;
     border-radius: 20px 20px 0px 0px;
   }
-  
+}

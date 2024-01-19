@@ -1,6 +1,14 @@
 @use './../utils/variables' as v;
 @use './../utils/mixins' as m;
 
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px;
+  
+  }
+
 .restaurant {
     position: relative;
     width: 100%;
@@ -64,6 +72,51 @@
         letter-spacing: 0em;
         text-align: left;
     }
+
+    .menu-heart {
+        width: 20px;
+        height: 21px;
+        position: absolute;
+        top: 60px;
+        right: 30px;
+        transition: all 2s;
+      
+        @include m.desktop {
+          position: absolute;
+          top: 60px;
+          right: 300px;
+      
+        }
+      
+        &:hover i {
+          display: none;
+        }
+      
+        &:hover {
+            display: block;
+            position: absolute;
+            clip-path: url(#heart-clip);
+            z-index: 1;
+            background-color: transparent;
+            background-image: linear-gradient(transparent, #9356dc -11.44%, #ff79da 123.93%);
+            stroke: 1px;
+            bottom: 60px;
+            right: 30px;
+            font-weight: 400;
+            background-position-y: 0%;
+            
+              @include m.desktop {
+                position: absolute;
+                top: 60px;
+                right: 300px;
+              }
+            
+        }
+      
+        
+            
+        
+      }
 }
 
 .menuContent {
@@ -73,7 +126,10 @@
     align-items: center;
     padding: 10px;
     gap: 15px;
-
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    
+    
     @include m.desktop {
         width: 75%;
         display: flex;
@@ -145,8 +201,9 @@
                 margin: 0; 
 
             }
-        }.description-text {
-            display: block; /* Utilisez un conteneur en bloc */
+        }
+        .description-text {
+            display: block;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -156,7 +213,7 @@
                 font-size: 15px;
                 line-height: 17.63px;
                 width: 100%;
-                margin: 0; /* Supprimez la marge par défaut du paragraphe */
+                margin: 0; 
             }
         }
             .prix {
@@ -203,3 +260,16 @@
         margin: 20px 0px 20px 0px;
       }
 }
+
+.entrance-1 { animation-delay: 0.5s; }
+.entrance-2 { animation-delay: 1.5s; }
+.entrance-3 { animation-delay: 2.5s; }
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
