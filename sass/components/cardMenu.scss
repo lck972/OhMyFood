@@ -216,37 +216,23 @@
                 margin: 0; 
             }
         }
-
-        .description-text {
-            display: block;
+        
+        .prix {
+            display: flex;
+            flex-direction: row;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 17.63px;
+            margin-left: auto;
             overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-    
-            p {
-                font-weight: 300;
-                font-size: 15px;
-                line-height: 17.63px;
-                width: 100%;
-                margin: 0; 
-            }
-        }
-            .prix {
-                display: flex;
-                flex-direction: row;
-                font-size: 15px;
-                font-weight: 700;
-                line-height: 17.63px;
-                margin-left: auto;
-                overflow: hidden;
                 
-                    .€ {
-                        display: flex;
-                        align-items: flex-end;
-                        width: 55px;
-                        padding: 15px 0px 15px 15px;
-                    }
+                .€ {
+                    display: flex;
+                     align-items: flex-end;
+                     width: 55px;
+                    padding: 15px 0px 15px 15px;
                 }
+             }
             
             .check {
                 display: grid;

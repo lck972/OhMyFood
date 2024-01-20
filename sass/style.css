@@ -638,19 +638,6 @@ footer .contact {
   overflow: hidden;
   margin: 0;
 }
-.menuContent .plats .description-text {
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.menuContent .plats .description-text p {
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 17.63px;
-  width: 100%;
-  margin: 0;
-}
 .menuContent .plats .prix {
   display: flex;
   flex-direction: row;
@@ -737,36 +724,6 @@ body .loading-body {
   visibility: visible;
 }
 
-.loading-container::before,
-.loading-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  transform: scale(0.75);
-  -webkit-filter: blur(5vw);
-  -moz-filter: blur(5vw);
-  -ms-filter: blur(5vw);
-  filter: blur(5vw);
-  background: linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
-  background-size: 200% 200%;
-  animation: animateGlow 10s ease infinite;
-}
-
-@keyframes animateGlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 .animated-text-container {
   width: 300px;
   height: 100px;
